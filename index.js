@@ -12,12 +12,15 @@ const init = async () => {
     path: '/{any*}',
     handler: () => '404 Error! Page not found',
   });
+
   server.route({
     method: 'GET',
     path: '/',
     handler: () => 'hello world',
   });
+
   await server.start();
+
   server.log('info', `server running on ${server.info.uri}`);
 };
 
