@@ -1,4 +1,5 @@
 const Hapi = require('@hapi/hapi');
+const Joi = require('@hapi/joi');
 
 const server = Hapi.server({
   port: 3000,
@@ -18,6 +19,18 @@ server.route({
   handler: () => 'hello world',
 });
 
+server.route({
+  method: 'GET',
+  path: '/hello/{name}',
+  handler: (request) => `hello ${request.params.name}!`,
+  options: {
+    validate: {
+      params: Joi.object({
+        name: Joi.string().min(3).max(15),
+      }),
+    },
+  },
+});
 exports.init = async () => {
   await server.initialize();
 

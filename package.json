@@ -7,7 +7,8 @@
   "author": "Midnight <rmargve@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@hapi/hapi": "^19.1.1"
+    "@hapi/hapi": "^19.1.1",
+    "@hapi/joi": "^17.1.1"
   },
   "devDependencies": {
     "@hapi/code": "^8.0.1",
