@@ -25,6 +25,14 @@ describe('GET', () => {
     expect(res.statusCode).to.equal(200);
   });
 
+  it('responds with 404 not found', async () => {
+    const res = await server.inject({
+      method: 'GET',
+      url: '/asdqwe',
+    });
+    expect(res.statusCode).to.equal(404);
+  });
+
   it('responds with 400 bad request', async () => {
     const res = await server.inject({
       method: 'GET',

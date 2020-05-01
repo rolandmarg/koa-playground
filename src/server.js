@@ -1,5 +1,6 @@
 const Hapi = require('@hapi/hapi');
 const Joi = require('@hapi/joi');
+const Boom = require('@hapi/boom');
 
 const server = Hapi.server({
   port: 3000,
@@ -10,7 +11,7 @@ const server = Hapi.server({
 server.route({
   method: '*',
   path: '/{any*}',
-  handler: () => '404 Error! Page not found',
+  handler: () => Boom.notFound('Page Missing'),
 });
 
 server.route({
