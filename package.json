@@ -1,9 +1,9 @@
 {
-  "name": "connector",
+  "name": "connector-backend",
   "version": "1.0.0",
-  "description": "recruiting platform",
+  "description": "recruiting platform backend",
   "main": "index.js",
-  "repository": "https://github.com/romMidnight/connector.git",
+  "repository": "https://github.com/romMidnight/connector-backend.git",
   "author": "Midnight <rmargve@gmail.com>",
   "license": "MIT",
   "dependencies": {

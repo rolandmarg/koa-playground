@@ -1,5 +1,5 @@
-const lab = require('@hapi/lab').script();
 const { expect } = require('@hapi/code');
+const lab = require('@hapi/lab').script();
 const { init } = require('../src/server');
 
 const { afterEach, beforeEach, describe, it } = lab;
