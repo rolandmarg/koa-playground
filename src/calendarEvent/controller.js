@@ -1,7 +1,7 @@
 const Router = require('@koa/router');
 const CalendarEvent = require('./model');
 
-const router = new Router({ prefix: '/calendarEvents' });
+const router = new Router({ prefix: '/calendarEvent' });
 
 router.get('/', async (ctx) => {
   ctx.body = await CalendarEvent.findAll();
