@@ -4,7 +4,7 @@ const koa = require('./server');
 const { sequelize } = require('./db');
 
 async function bootstrap() {
-  await sequelize.sync();
+  await sequelize.sync({ force: true });
 
   koa.listen(4000);
 }
