@@ -1,2 +1,2 @@
-# connector
-recruitment platform
+# Playground
+for exploring koa, postgres, sequelize
